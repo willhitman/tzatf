@@ -6,23 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TZAT | Crowd Funding for Albinism</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <section class="header main-section">
       <header>
-       
+        <section class="header-logo">
+          <img src="images/quote.svg" alt="" />
+        </section>
         <section class="nav-bar">
+          <div class="toggle"></div>
           <nav>
-            <ul class="nav-list">
-              <section class="header-logo"><img src="images/quote.svg" alt="" /></section>
-
-              <li class="nav-list-item"><a href="#" class="active nav-list-a">Home</a></li>
-              <li class="nav-list-item"><a href="#" class="nav-list-a">What We Do</a></li>
-              <li class="nav-list-item"><a href="#" class="nav-list-a">About Us</a></li>
-              <li class="nav-list-item"><a href="#" class="nav-list-a">Donate</a></li>
-              <li class="nav-list-item"><a href="#" class="nav-list-a">Contact Us</a></li>
+            <ul class="nav-list navigation">
+              <li class="nav-list-item">
+                <a href="#" class="active nav-list-a">Home</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="nav-list-a">What We Do</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="nav-list-a">About Us</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="nav-list-a">Donate</a>
+              </li>
+              <li class="nav-list-item">
+                <a href="#" class="nav-list-a">Contact Us</a>
+              </li>
             </ul>
           </nav>
+          <script>
+            let menuToggle = document.querySelector(".toggle");
+            let navigation = document.querySelector(".navigation");
+
+            menuToggle.onclick = function () {
+              menuToggle.classList.toggle("click");
+              navigation.classList.toggle("click");
+            };
+          </script>
         </section>
         <section class="header-elements">
           <h1>Welcome</h1>
@@ -32,11 +56,225 @@
             blanditiis earum.
           </p>
           <section class="buttons">
-            <a href="" class="a-btn btn-primary">Learn More</a>
-            <a href="" class="a-btn btn-secondary">Donate</a>
+            <a href="" class="a-btn btn-secondary">Learn More</a>
+            <a href="" class="a-btn btn-primary">Donate</a>
           </section>
         </section>
       </header>
     </section>
+    <main class="main-content">
+      <section class="what-we-do container">
+        <h2>What We Do</h2>
+        <section class="cards-container">
+          <section class="card">
+            <div class="card-icon"></div>
+            <div class="card-header">Lorem, ipsum dolor.</div>
+            <div class="card-body">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus?
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-icon"></div>
+            <div class="card-header">Lorem, ipsum dolor.</div>
+            <div class="card-body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque!
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-icon"></div>
+            <div class="card-header">Lorem, ipsum dolor.</div>
+            <div class="card-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur!
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-icon"></div>
+            <div class="card-header">Lorem, ipsum dolor.</div>
+            <div class="card-body">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus?
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-icon"></div>
+            <div class="card-header">Lorem, ipsum dolor.</div>
+            <div class="card-body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque!
+            </div>
+          </section>
+          <section class="card">
+            <div class="card-icon"></div>
+            <div class="card-header">Lorem, ipsum dolor.</div>
+            <div class="card-body">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur!
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="banner-one">
+        <section class="image"></section>
+        <section class="shape">
+          <h3>Lorem ipsum dolor sit amet.</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
+            deleniti consectetur autem tenetur obcaecati ut magni odio
+            blanditiis doloremque porro voluptate a alias aspernatur
+            accusantium, odit, itaque nisi doloribus. Assumenda.
+          </p>
+          <a href="#" class="a-btn btn-primary">Donate </a>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
+            dolore?
+          </p>
+        </section>
+      </section>
+      <section class="about-us">
+        <section class="article">
+          <article>
+            <h2>About Us</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit
+              inventore minima omnis corporis, autem necessitatibus ipsum est
+              quasi totam. Quod inventore assumenda accusamus quae similique
+              provident earum, ut itaque debitis! Exercitationem, quasi
+              doloribus in culpa cumque consequatur, ipsam facere, nihil error
+              dolorem labore accusamus quibusdam est nulla quis soluta provident
+              itaque dignissimos minus. Nihil eos, animi reprehenderit quia ut
+              vitae aspernatur, iusto doloremque incidunt similique architecto
+              necessitatibus beatae ab molestias?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,
+              pariatur consequuntur non in dignissimos illo corporis autem nemo
+              dolorum excepturi provident nam error expedita cum numquam,
+              consectetur sequi obcaecati? Laborum veniam cum necessitatibus
+              consequuntur, repellendus ipsum ab rerum eveniet libero, facere
+              impedit assumenda numquam? Ea ipsam delectus iste consequatur
+              minima. Impedit architecto beatae molestias provident, praesentium
+              aspernatur recusandae officia ex, quo explicabo quod. Nesciunt
+              itaque ut natus saepe dolorem? Temporibus autem recusandae
+              mollitia commodi quaerat. Ratione deleniti necessitatibus
+              reprehenderit, expedita atque non mollitia voluptates quaerat
+              magni alias error ab earum ea natus! Dicta architecto commodi
+              neque doloremque nemo sed qui?
+            </p>
+          </article>
+          <section class="cards-container">
+            <section class="card">
+              <div class="card-icon"></div>
+              <div class="card-header">Lorem, ipsum dolor.</div>
+              <div class="card-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus?
+              </div>
+            </section>
+            <section class="card">
+              <div class="card-icon"></div>
+              <div class="card-header">Lorem, ipsum dolor.</div>
+              <div class="card-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus?
+              </div>
+            </section>
+            <section class="card">
+              <div class="card-icon"></div>
+              <div class="card-header">Lorem, ipsum dolor.</div>
+              <div class="card-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus?
+              </div>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section class="banner-two parallax">
+        <h3>Ready To Make A Change?</h3>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ex
+          quasi dicta maiores? Voluptas iusto quod similique quasi nemo in.
+        </p>
+        <a href="" class="a-btn btn-secondary">Donate from as little as ?</a>
+      </section>
+      <section class="contact-details">
+        <h2>Contact Us</h2>
+        <section class="contact">
+          <section class="details">
+            <h3>Get in touch with us</h3>
+            <section class="phone-email">
+              <a href="tel:+263234567890"> +263 23 456 7890</a>
+              <a href="mailto:abc12de@fgh.co.zw"> abc12de@fgh.co.zw</a>
+            </section>
+            <section class="socials">
+              <h4>Follow us on the Socials</h4>
+              <section class="icons">
+                <a href="#">S</a>
+                <a href="#">S</a>
+                <a href="#">S</a>
+              </section>
+            </section>
+          </section>
+          <section class="address-logo">
+            <h3>Address</h3>
+            <p>
+              Lorem ipsum dolor <br />
+              amet consectetur <br />adipisicing elit.
+            </p>
+            <a href="#" class="logo-footer">Logo</a>
+          </section>
+          <section class="form">
+            <form action="">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                enterkeyhint="next"
+                placeholder="Your name here"
+                required
+              />
+
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                autocomplete="subject"
+                enterkeyhint="next"
+                placeholder="Your query here"
+                required
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                enterkeyhint="next"
+                placeholder="Your email here"
+                required
+              />
+
+              <label for="subject">Phone number</label>
+              <input
+                type="tel"
+                id="tel"
+                name="tel"
+                autocomplete="tel"
+                enterkeyhint="done"
+                placeholder="Your phone number here"
+                required
+              />
+              <button type="submit" id="submit" name="submit">Submit</button>
+
+            </form>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copyTZATF 2021</p>
+    </footer>
   </body>
 </html>
