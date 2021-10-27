@@ -528,6 +528,17 @@ nav .nav-list-item {
   margin-top: 3em;
   width: 40%;
 }
+@media only screen and (max-width:500px){
+  .banner-two h3{
+    width: 100%;
+  }
+  .banner-two p{
+    width: 100%;
+  }
+  .banner-two .a-btn{
+    width: 60%;
+  }
+}
 .parallax {
   background-image: url("images/mountain.png");
 
@@ -554,7 +565,13 @@ nav .nav-list-item {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding: 1em 0;
+  flex-wrap: wrap;
+  padding: 1em 2em;
+}
+@media only screen and (max-width:1023px){
+  .contact{
+    justify-content: center;
+  }
 }
 form {
   position: relative;
@@ -575,6 +592,14 @@ input {
 input:focus-visible {
   outline: none;
 }
+input:focus{
+  /* outline: 4px solid var(--primary-color); */
+  outline: none;
+  border-color:  #fff;
+}
+input:invalid{
+  box-shadow: none;
+}
 input[id]{
   background: transparent;
 }
@@ -583,10 +608,15 @@ input[id]{
   padding: 0.8em 2em;
   font: inherit;
   border: none;
-  outline: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--header-border-radius);
   background: #fff;
 
-  border-radius: 0.5em;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 label {
@@ -640,4 +670,8 @@ label {
   text-decoration: none;
   color: #fff;
   font-size: 5em;
+}
+form .material-icons{
+  font-size: 1em;
+  color: var(--primary-color);
 }
