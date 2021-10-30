@@ -215,14 +215,11 @@
           </section>
           <section class="address-logo">
             <h3>Address</h3>
-            <p>
-              Lorem ipsum dolor 
-              amet consectetur <br />adipisicing elit.
-            </p>
+            <p>Lorem ipsum dolor amet consectetur <br />adipisicing elit.</p>
             <a href="#" class="logo-footer">Logo</a>
           </section>
           <section class="form">
-            <form action="">
+            <form id="form1">
               <label for="name">Name</label>
               <input
                 type="text"
@@ -266,11 +263,49 @@
                 placeholder="Your phone number here"
                 required
               />
-              <button type="submit" id="submit" name="submit"><span class="material-icons">
-                send
-                </span>Submit</button>
-
+              <button type="submit" id="submit" name="submit">
+                <span class="material-icons"> send </span>Submit
+              </button>
             </form>
+            <script>
+              const myForm = document.getElementById("form1");
+              myForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                const formdata = new FormData(this);
+
+                let button = (document.getElementById("submit").textContent =
+                  "Sending...");
+
+                fetch("http://127.0.0.1:5000/contact", {
+                  method: "post",
+                  body: formdata,
+                })
+                  .then(function (response) {
+                    
+                    return response.text();
+                   
+                  })
+                  .then(function (text) {
+                    let res = JSON.parse(text);
+                    if(res.response == "true"){
+                      console.log("here");
+                      console.log(res.response);
+                      let nme = (document.getElementById("name").value = "");
+                      let email = (document.getElementById("email").value = "");
+                      let subject = (document.getElementById("subject").value = "");
+                      let tel = (document.getElementById("tel").value = "");
+
+                      let button = (document.getElementById("submit").textContent = "Received!");
+                    }
+                    else{
+                      let button = (document.getElementById("submit").textContent = "Resend");
+                    }
+                  })
+                  .catch(function (error) {
+                    console.log(error);
+                  });
+              });
+            </script>
           </section>
         </section>
       </section>
