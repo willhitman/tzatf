@@ -456,7 +456,6 @@ nav .nav-list-item {
   }
 }
 
-
 .about-us {
   position: relative;
   width: 95%;
@@ -636,7 +635,10 @@ input[id]{
   align-items: center;
   cursor: pointer;
 }
-
+#submit:hover{
+  background: var(--accent-color);
+  color: #fff;
+}
 label {
   padding-top: 1em;
   color: var(--primary-color);
@@ -657,7 +659,12 @@ label {
   flex-direction: column;
 }
 .phone-email a{
+  text-decoration: none;
+  color: #fff;
   margin: .3em 0;
+}
+.phone-email a:hover{
+  color: var(--accent-color);
 }
 .socials h4{
   margin: .5em 0;
@@ -693,7 +700,10 @@ form .material-icons{
   font-size: 1em;
   color: var(--primary-color);
 }
+#submit:hover .material-icons{
 
+  color: #fff;
+}
 
 @media only screen and (max-width:988px){
   .about-us{
