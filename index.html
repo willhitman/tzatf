@@ -58,6 +58,7 @@
           <section class="buttons">
             <a href="#" class="a-btn btn-secondary">Learn More</a>
             <a href="" class="a-btn btn-primary modal-btn">Donate</a>
+            <!-- Done -->
             <div class="modal-bg">
               <div class="modal">
                 <span class="modal-close">&#10005;</span>
@@ -78,20 +79,7 @@
 
                   <button type="submit" id="submit" name="submit">Donate</button>
                 </form>
-                <script>
-                  var modal = document.querySelector('.modal-btn');
-                  var modalBG = document.querySelector('.modal-bg');
-
-                  var close = document.querySelector('.modal-close')
-                  modal.addEventListener('click', function(e){
-                    e.preventDefault();
-                    modalBG.classList.add('bg-active');
-                  })
-                  close.addEventListener('click', function(e){
-                    modalBG.classList.remove('bg-active');
-
-                  })
-                </script>
+              
                 <script>
                   const myForm2 = document.getElementById("form2");
                   myForm2.addEventListener("submit", function (e) {
@@ -110,15 +98,12 @@
                        
                       })
                       .then(function (text) {
-                        let res1 = JSON.parse(text);
-                        console.log(text)
-                        if(res1.response == "true"){
-                          console.log("here");
-                          console.log(res1.response);
-                          let nme = (document.getElementById("name").value = "");
-                          let email = (document.getElementById("email").value = "");
-                          let subject = (document.getElementById("subject").value = "");
-                          let tel = (document.getElementById("tel").value = "");
+                        var res1 = JSON.parse(text);
+                        if(res1.success == "true"){
+                          let nme2 = (document.getElementById("name").value = "");
+                          let email2 = (document.getElementById("email").value = "");
+                          let subject2 = (document.getElementById("amount").value = "300");
+                          let tel2 = (document.getElementById("phone").value = "");
     
                           let button1 = (document.getElementById("submit").textContent = "Received!");
                         }
@@ -199,13 +184,71 @@
             blanditiis doloremque porro voluptate a alias aspernatur
             accusantium, odit, itaque nisi doloribus. Assumenda.
           </p>
-          <a href="#" class="a-btn btn-primary">Donate </a>
+          <a href="#" class="a-btn btn-primary modal-btn1">Donate </a>
+         
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto,
             dolore?
           </p>
         </section>
       </section>
+      <div class="modal-bg modal-bg1">
+        <div class="modal modal1">
+          <span class="modal-close modal-close1">&#10005;</span>
+          <h3>Lorem, ipsum.</h3>
+          <form action="" id="form3">
+            
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" autocomplete="name" class="name" required enterkeyhint="next">
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" autocomplete="email" class="email" required enterkeyhint="next">
+            
+            <label for="email">Ecocash Number</label>
+            <input type="text" name="phone" id="phone" autocomplete="phone number" class="phone" required enterkeyhint="Done">
+
+            <label for="amount">Amount</label>
+            <input type="text" name="amount" id="amount" min="200" max="10000" class="amount" value="300">
+
+            <button type="submit" id="submit" name="submit" class="submit">Donate</button>
+          </form>
+        
+          <script>
+            const myForm3 = document.getElementById("form3");
+            myForm3.addEventListener("submit", function (e) {
+              e.preventDefault();
+              const formdata2 = new FormData(this);
+
+              let button2 = (document.getElementById("submit").textContent = "Sending...");
+
+              fetch("http://127.0.0.1:5000/donation", {
+                method: "post",
+                body: formdata2,
+              })
+                .then(function (response) {
+                  return response.text();
+                })
+                .then(function (text) {
+                  let res2 = JSON.parse(text);
+                  if(res2.success == "true"){
+                    let nme3 = (document.querySelector(".name").value = "");
+                    let email3 = (document.querySelector(".email").value = "");
+                    let subject3 = (document.querySelector(".amount").value = "300");
+                    let tel3 = (document.querySelector(".phone").value = "");
+
+                    let button2 = (document.querySelector(".submit").textContent = "Received!");
+                  }
+                  else{
+                    let button2 = (document.querySelector(".submit").textContent = "Resend");
+                  }
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
+            });
+          </script>
+        </div>
+      </div>
       <section class="about-us">
         <section class="article">
           <article>
@@ -262,14 +305,74 @@
           </section>
         </section>
       </section>
+      <div class="modal-bg modal-bg2">
+        <div class="modal">
+          <span class="modal-close modal-close2">&#10005;</span>
+          <h3>Lorem, ipsum.</h3>
+          <form action="" id="form4">
+            
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" autocomplete="name" class="name1" required enterkeyhint="next">
+
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" autocomplete="email" class="email1" required enterkeyhint="next">
+            
+            <label for="email">Ecocash Number</label>
+            <input type="text" name="phone" id="phone" autocomplete="phone number" class="phone1" required enterkeyhint="Done">
+
+            <label for="amount">Amount</label>
+            <input type="text" name="amount" id="amount" min="200" max="10000" class="amount1" value="300">
+
+            <button type="submit" id="submit" name="submit" class="submit1">Donate</button>
+          </form>
+        
+          <script>
+            const myForm4 = document.getElementById("form4");
+            myForm4.addEventListener("submit", function (e) {
+              e.preventDefault();
+              const formdata3 = new FormData(this);
+
+              let button3 = (document.getElementById("submit").textContent = "Sending...");
+
+              fetch("http://127.0.0.1:5000/donation", {
+                method: "post",
+                body: formdata3,
+              })
+                .then(function (response) {
+                  
+                  return response.text();
+                 
+                })
+                .then(function (text) {
+                  let res3 = JSON.parse(text);
+                  if(res3.success == "true"){
+                    let nme = (document.querySelector(".name1").value = "");
+                    let email = (document.querySelector(".email1").value = "");
+                    let subject = (document.querySelector(".amount1").value = "");
+                    let tel = (document.querySelector(".phone1").value = "");
+
+                    let button3 = (document.querySelector(".submit1").textContent = "Received!");
+                  }
+                  else{
+                    let button3 = (document.querySelector(".submit1").textContent = "Resend");
+                  }
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
+            });
+          </script>
+        </div>
+      </div>
       <section class="banner-two parallax">
         <h3>Ready To Make A Change?</h3>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ex
           quasi dicta maiores? Voluptas iusto quod similique quasi nemo in.
         </p>
-        <a href="" class="a-btn btn-secondary">Donate from as little as ?</a>
+        <a href="" class="a-btn btn-secondary modal-btn2">Donate from as little as ?</a>
       </section>
+      
       <section class="contact-details">
         <h2>Contact Us</h2>
         <section class="contact">
@@ -388,5 +491,6 @@
     <footer>
       <p>Copyright &copyTZATF 2021</p>
     </footer>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

@@ -768,3 +768,6 @@ form .material-icons{
 
   border-radius: var(--header-border-radius);
 }
+.modal input{
+  color: #fff;
+}
